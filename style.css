@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --background: #131313;
+  --primary-orange: #ff5f00;
+  --primary-orange-light: #ffb599;
+  --secondary-lime: #caf300;
+  --surface-low: #1c1b1b;
+  --surface-medium: #201f1f;
+  --surface-high: #2a2a2a;
+  --surface-highest: #353534;
+  --on-surface-variant: #e4bfb1;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Lexend", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: white;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+.text-primary-orange { color: var(--primary-orange); }
+.text-secondary-lime { color: var(--secondary-lime); }
+.text-on-surface-variant { color: var(--on-surface-variant); }
+
+.bg-background { background-color: var(--background); }
+.bg-primary-orange { background-color: var(--primary-orange); }
+.bg-secondary-lime { background-color: var(--secondary-lime); }
+.bg-surface-low { background-color: var(--surface-low); }
+.bg-surface-medium { background-color: var(--surface-medium); }
+.bg-surface-high { background-color: var(--surface-high); }
+.bg-surface-highest { background-color: var(--surface-highest); }
+
+.border-primary-orange { border-color: var(--primary-orange); }
+.border-secondary-lime { border-color: var(--secondary-lime); }
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 95, 0, 0.4);
+}
+
+.italic-headline {
+  font-style: italic;
+}
+
+/* Custom Utilities for the Bento Grid and Layout */
+.max-w-7xl { max-width: 80rem; margin-left: auto; margin-right: auto; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--primary-orange);
+  color: white;
+}
